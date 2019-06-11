@@ -8,7 +8,8 @@ const app = express();
  * middleware that allows express to pass off graphql queries to module
  */
 app.use('/graphql', graphqlHTTP({
-  schema
+  schema,
+  graphiql: true
 }));
 
 app.listen(3001, () => {
